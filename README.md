@@ -4,7 +4,7 @@
 
 ## 플레이
 
-👉 **[여기서 바로 플레이하기](https://shawnkang64.github.io/picklegame/)**
+👉 **[여기서 바로 플레이하기](https://kangoroom.github.io/picklegame/)**
 
 ## 조작법
 
@@ -24,7 +24,7 @@
 빌드 도구가 필요 없습니다. `index.html`을 브라우저로 열기만 하면 됩니다.
 
 ```bash
-git clone https://github.com/shawnkang64/picklegame.git
+git clone https://github.com/kangoroom/picklegame.git
 cd picklegame
 # index.html을 브라우저로 열기 (또는 VS Code Live Server 확장 사용)
 ```
