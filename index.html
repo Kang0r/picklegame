@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>피클 도망가! - 픽셀 서바이벌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <div id="hud">
+      <div id="score">TIME: 0.0</div>
+      <div id="best">BEST: 0.0</div>
+    </div>
+
+    <canvas id="game" width="360" height="560"></canvas>
+
+    <!-- 시작 화면 -->
+    <div id="start-screen" class="overlay">
+      <h1 id="start-title">🐰 피클 도망가!</h1>
+      <p class="desc">← → 방향키로 움직여서<br/>떨어지는 장애물을 피하세요!</p>
+      <div id="current-theme-preview">
+        <canvas id="start-preview" width="56" height="56"></canvas>
+        <span id="start-theme-name">초원</span>
+      </div>
+      <button id="start-btn">게임 시작</button>
+      <button id="customize-btn" class="secondary-btn">🎨 커스터마이징</button>
+    </div>
+
+    <!-- 커스터마이징 화면 -->
+    <div id="customize-screen" class="overlay hidden">
+      <h1>커스터마이징</h1>
+      <p class="desc">배경을 고르면<br/>어울리는 캐릭터로 바뀌어요</p>
+      <div id="theme-list">
+        <button class="theme-card" data-theme="grass">
+          <canvas class="theme-preview" width="64" height="64"></canvas>
+          <span class="theme-name">초원</span>
+        </button>
+        <button class="theme-card" data-theme="sea">
+          <canvas class="theme-preview" width="64" height="64"></canvas>
+          <span class="theme-name">바다</span>
+        </button>
+        <button class="theme-card" data-theme="space">
+          <canvas class="theme-preview" width="64" height="64"></canvas>
+          <span class="theme-name">우주</span>
+        </button>
+      </div>
+      <button id="customize-back-btn">뒤로가기</button>
+    </div>
+
+    <!-- 게임 오버 화면 -->
+    <div id="gameover-screen" class="overlay hidden">
+      <h1>게임 오버!</h1>
+      <p class="desc">생존 시간: <span id="final-time">0.0</span>초</p>
+      <p class="desc small">최고 기록: <span id="final-best">0.0</span>초</p>
+      <div class="btn-row">
+        <button id="restart-btn">다시 시작</button>
+        <button id="home-btn" class="secondary-btn">홈으로</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
